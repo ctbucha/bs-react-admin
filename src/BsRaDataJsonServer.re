@@ -1,7 +1,7 @@
 type httpClient;
 type raDataJsonServer;
 
-[@bs.module "ra-data-json-server"]
+[@bs.module]
 external getRaDataJsonServer :
   (~apiUrl: string, ~httpClient: httpClient=?, unit) => raDataJsonServer =
-  "default";
+  "ra-data-json-server";
