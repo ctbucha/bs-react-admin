@@ -1,0 +1,29 @@
+{
+  "name": "bs-react-admin",
+  "version": "0.0.1",
+  "description": "BuckleScript bindings for react-admin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctbucha/bs-react-admin.git"
+  },
+  "keywords": [
+    "react-admin",
+    "bucklescript",
+    "reasonml",
+    "react",
+    "ui",
+    "binding",
+    "component",
+    "components"
+  ],
+  "author": "ctbucha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ctbucha/bs-react-admin/issues"
+  },
+  "homepage": "https://github.com/ctbucha/bs-react-admin#readme"
+}
