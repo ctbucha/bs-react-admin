@@ -1,5 +1,5 @@
 {
-  "name": "bs-react-admin",
+  "name": "@ctbucha/bs-react-admin",
   "version": "0.0.1",
   "description": "BuckleScript bindings for react-admin",
   "main": "index.js",
