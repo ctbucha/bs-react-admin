@@ -1,7 +1,10 @@
 type httpClient;
 type raDataJsonServer;
 
-[@bs.module]
+%raw
+"var RaDataJsonServer = require('ra-data-json-server')";
+[@bs.val]
 external getRaDataJsonServer :
   (~apiUrl: string, ~httpClient: httpClient=?, unit) => raDataJsonServer =
-  "ra-data-json-server";
+  "RaDataJsonServer";
+let getRaDataJsonServer = getRaDataJsonServer;
