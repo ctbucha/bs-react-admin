@@ -46,7 +46,7 @@ let make =
       ~menu=?,
       ~theme=?,
       ~title=?,
-      ~children,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=admin,
