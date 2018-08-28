@@ -12,7 +12,7 @@ type matchType('a) = {
 [@bs.obj]
 external makeProps :
   (
-    ~context: [@bs.string] [ | `route | `registration],
+    ~context: [@bs.string] [ | `route | `registration]=?,
     ~match: matchType('a)=?,
     ~name: string,
     ~list: 'b=?,
@@ -21,8 +21,8 @@ external makeProps :
     ~show: 'e=?,
     ~icon: 'f=?,
     ~options: 'g=?,
-    ~registerResource: 'h,
-    ~unregisterResource: 'i,
+    ~registerResource: 'h=?,
+    ~unregisterResource: 'i=?,
     unit
   ) =>
   _ =
@@ -30,7 +30,7 @@ external makeProps :
 
 let make =
     (
-      ~context,
+      ~context=?,
       ~match=?,
       ~name,
       ~list=?,
@@ -39,15 +39,15 @@ let make =
       ~show=?,
       ~icon=?,
       ~options=?,
-      ~registerResource,
-      ~unregisterResource,
-      ~children,
+      ~registerResource=?,
+      ~unregisterResource=?,
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass=resource,
     ~props=
       makeProps(
-        ~context,
+        ~context?,
         ~match?,
         ~name,
         ~list?,
@@ -56,8 +56,8 @@ let make =
         ~show?,
         ~icon?,
         ~options?,
-        ~registerResource,
-        ~unregisterResource,
+        ~registerResource?,
+        ~unregisterResource?,
         (),
       ),
     children,
