@@ -1,0 +1,23 @@
+{
+  "name": "@ctbucha/bs-react-admin",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "bs-dependencies": [
+    "reason-react"
+  ],
+  "package-specs": {
+    "module": "commonjs"
+  },
+  "reason": {
+    "react-jsx": 2
+  },
+  "suffix": ".bs.js",
+  "bsc-flags": [
+    "-bs-super-errors"
+  ],
+  "refmt": 3
+}
