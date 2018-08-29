@@ -1,6 +1,8 @@
 [@bs.module "react-admin"]
 external textField : ReasonReact.reactClass = "TextField";
 
+let component = ReasonReact.statelessComponent("BsReactAdmin__TextField");
+
 [@bs.obj]
 external makeProps :
   (
@@ -44,6 +46,7 @@ let make =
         ~record?,
         ~sortBy?,
         ~source?,
+	()
       ),
     children,
   );
