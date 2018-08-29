@@ -1,13 +1,16 @@
 [@bs.module "react-admin"]
 external resource : ReasonReact.reactClass = "Resource";
 
-type matchType('a) = {
-  .
-  "isExact": bool,
-  "params": 'a,
-  "path": string,
-  "url": string,
-};
+type matchType('a) =
+  Js.t(
+    {
+      .
+      "isExact": bool,
+      "params": 'a,
+      "path": string,
+      "url": string,
+    },
+  );
 
 [@bs.obj]
 external makeProps :
