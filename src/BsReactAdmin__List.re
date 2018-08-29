@@ -44,7 +44,7 @@ let make =
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=admin,
+    ~reactClass=list_,
     ~props=
       makeProps(
         ~actions?,
