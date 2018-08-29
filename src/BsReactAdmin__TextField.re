@@ -46,7 +46,7 @@ let make =
         ~record?,
         ~sortBy?,
         ~source?,
-	()
+        (),
       ),
     children,
   );

@@ -60,7 +60,7 @@ let make =
           ~perPage?,
           ~sort?,
           ~title?,
-	  ()
+          (),
         ),
         props,
       ),
