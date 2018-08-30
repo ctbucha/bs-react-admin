@@ -3,6 +3,9 @@ module Admin = BsReactAdmin__Admin;
 module Resource = BsReactAdmin__Resource;
 
 module List = BsReactAdmin__List;
+module Create = BsReactAdmin__Create;
+module SimpleForm = BsReactAdmin__SimpleForm;
+module TextInput = BsReactAdmin__TextInput;
 
 module Datagrid = BsReactAdmin__Datagrid;
 
