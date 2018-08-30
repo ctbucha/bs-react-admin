@@ -1,7 +1,5 @@
 [@bs.module "react-admin"]
-external textField : ReasonReact.reactClass = "TextField";
-
-let component = ReasonReact.statelessComponent("BsReactAdmin__TextField");
+external booleanField : ReasonReact.reactClass = "BooleanField";
 
 [@bs.obj]
 external makeProps :
@@ -14,7 +12,7 @@ external makeProps :
     ~label: string=?,
     ~record: 'a=?,
     ~sortBy: string=?,
-    ~source: string=?,
+    ~source: string,
     unit
   ) =>
   _ =
@@ -30,11 +28,11 @@ let make =
       ~label=?,
       ~record=?,
       ~sortBy=?,
-      ~source=?,
+      ~source,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=textField,
+    ~reactClass=booleanField,
     ~props=
       makeProps(
         ~addLabel?,
@@ -45,7 +43,7 @@ let make =
         ~label?,
         ~record?,
         ~sortBy?,
-        ~source?,
+        ~source,
         (),
       ),
     children,
