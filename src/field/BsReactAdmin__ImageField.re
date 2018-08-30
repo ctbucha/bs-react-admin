@@ -1,7 +1,5 @@
 [@bs.module "react-admin"]
-external textField : ReasonReact.reactClass = "TextField";
-
-let component = ReasonReact.statelessComponent("BsReactAdmin__TextField");
+external imageField : ReasonReact.reactClass = "ImageField";
 
 [@bs.obj]
 external makeProps :
@@ -11,10 +9,12 @@ external makeProps :
     ~className: string=?,
     ~cellClassName: string=?,
     ~headerClassName: string=?,
-    ~label: string=?,
-    ~record: 'a=?,
+    ~classes: 'a=?,
+    ~record: 'b=?,
     ~sortBy: string=?,
-    ~source: string=?,
+    ~source: string,
+    ~src: string=?,
+    ~title: string=?,
     unit
   ) =>
   _ =
@@ -27,14 +27,16 @@ let make =
       ~className=?,
       ~cellClassName=?,
       ~headerClassName=?,
-      ~label=?,
+      ~classes=?,
       ~record=?,
       ~sortBy=?,
-      ~source=?,
+      ~source,
+      ~src=?,
+      ~title=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
-    ~reactClass=textField,
+    ~reactClass=imageField,
     ~props=
       makeProps(
         ~addLabel?,
@@ -42,10 +44,12 @@ let make =
         ~className?,
         ~cellClassName?,
         ~headerClassName?,
-        ~label?,
+        ~classes?,
         ~record?,
         ~sortBy?,
-        ~source?,
+        ~source,
+        ~src?,
+        ~title?,
         (),
       ),
     children,
