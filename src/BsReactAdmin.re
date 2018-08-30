@@ -6,6 +6,8 @@ module List = BsReactAdmin__List;
 module Create = BsReactAdmin__Create;
 module Edit = BsReactAdmin__Edit;
 module SimpleForm = BsReactAdmin__SimpleForm;
+
+module DisabledInput = BsReactAdmin__DisabledInput;
 module TextInput = BsReactAdmin__TextInput;
 
 module Datagrid = BsReactAdmin__Datagrid;
