@@ -3,6 +3,9 @@ module Admin = BsReactAdmin__Admin;
 module Resource = BsReactAdmin__Resource;
 
 module List = BsReactAdmin__List;
+module Show = BsReactAdmin__Show;
+module ShowButton = BsReactAdmin__ShowButton;
+module SimpleShowLayout = BsReactAdmin__SimpleShowLayout;
 module Create = BsReactAdmin__Create;
 module Edit = BsReactAdmin__Edit;
 module EditButton = BsReactAdmin__EditButton;
