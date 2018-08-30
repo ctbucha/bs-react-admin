@@ -20,4 +20,7 @@ module NumberField = BsReactAdmin__NumberField;
 module SelectField = BsReactAdmin__SelectField;
 module ReferenceField = BsReactAdmin__ReferenceField;
 module ReferenceManyField = BsReactAdmin__ReferenceManyField;
+module ReferenceArrayField = BsReactAdmin__ReferenceArrayField;
+module RichTextField = BsReactAdmin__RichTextField;
 module TextField = BsReactAdmin__TextField;
+module UrlField = BsReactAdmin__UrlField;
