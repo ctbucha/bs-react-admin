@@ -31,29 +31,6 @@ type props('a, 'b, 'c, 'd, 'e, 'f) = {
   type_: string,
 };
 
-/*
- [@bs.obj]
- external makeProps :
-   (
-     ~className: string=?,
-     ~input: 'a=?,
-     ~isRequired: bool=?,
-     ~label: string=?,
-     ~meta: 'b=?,
-     ~name: string=?,
-     ~onBlur: 'c=?,
-     ~onChange: 'd=?,
-     ~onFocus: 'e=?,
-     ~options: 'f=?,
-     ~resource: string=?,
-     ~source: string=?,
-     ~type_: string=?,
-     unit
-   ) =>
-   _ =
-   "";
- */
-
 let make =
     (
       ~className=?,
