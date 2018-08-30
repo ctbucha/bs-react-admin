@@ -4,7 +4,7 @@ module Resource = BsReactAdmin__Resource;
 
 module List = BsReactAdmin__List;
 module Create = BsReactAdmin__Create;
-module Create = BsReactAdmin__Edit;
+module Edit = BsReactAdmin__Edit;
 module SimpleForm = BsReactAdmin__SimpleForm;
 module TextInput = BsReactAdmin__TextInput;
 
