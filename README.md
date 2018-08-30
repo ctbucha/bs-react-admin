@@ -3,6 +3,9 @@
 
 ## Status
 
+🚧 This is a WIP, not everything is supported yet. 🚧
+
+Feel free to create an issue or PR if you find anything missing.
 
 ## Installation
 
