@@ -47,4 +47,6 @@ module NumberInput = BsReactAdmin__NumberInput;
 module RadioButtonGroupInput = BsReactAdmin__RadioButtonGroupInput;
 module ReferenceInput = BsReactAdmin__ReferenceInput;
 module ReferenceArrayInput = BsReactAdmin__ReferenceArrayInput;
+module SelectInput = BsReactAdmin__SelectInput;
+module SelectArrayInput = BsReactAdmin__SelectArrayInput;
 module TextInput = BsReactAdmin__TextInput;
