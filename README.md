@@ -68,8 +68,8 @@ let make = (props, _children) => {
     ),
 };
 
-/* Need to pass this to Resource as ReactJS instead of ReasonReact since
- * react-admin uses it in a non-standard way.
+/* Need to pass this to Resource as a ReactJS component instead of a ReasonReact
+ * component since react-admin handles this as a ReactJS component.
  */
 let toReactJs = 
   ReasonReact.wrapReasonForJs(~component, jsProps => make(jsProps, [||]));
