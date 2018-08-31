@@ -14,7 +14,9 @@ type dataProvider('a) =
 external getRaDataJsonServer :
   (
     ~apiUrl: string,
-    ~httpClient: (~url: string, ~params: Js.Json.t) => Js.Promise.t('a)=?,
+    ~httpClient: (~url: string, ~params: Js.Dict.t(string)) =>
+                 Js.Promise.t('a)
+                   =?,
     unit
   ) =>
   dataProvider('a) =
