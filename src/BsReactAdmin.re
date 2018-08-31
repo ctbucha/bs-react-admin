@@ -1,6 +1,9 @@
 module Admin = BsReactAdmin__Admin;
 module Resource = BsReactAdmin__Resource;
 
+/* util */
+module FetchUtils = BsReactAdmin__FetchUtils;
+
 /* button */
 module ShowButton = BsReactAdmin__ShowButton;
 module EditButton = BsReactAdmin__EditButton;
