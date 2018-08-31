@@ -9,9 +9,12 @@ module SimpleShowLayout = BsReactAdmin__SimpleShowLayout;
 module Create = BsReactAdmin__Create;
 module Edit = BsReactAdmin__Edit;
 module EditButton = BsReactAdmin__EditButton;
-module SimpleForm = BsReactAdmin__SimpleForm;
 
 module Datagrid = BsReactAdmin__Datagrid;
+
+/* forms */
+module SimpleForm = BsReactAdmin__SimpleForm;
+module TabbedForm = BsReactAdmin__TabbedForm;
 
 /* fields */
 
@@ -43,6 +46,7 @@ module DisabledInput = BsReactAdmin__DisabledInput;
 module FileInput = BsReactAdmin__FileInput;
 module ImageInput = BsReactAdmin__ImageInput;
 module LongTextInput = BsReactAdmin__LongTextInput;
+module NullableBooleanInput = BsReactAdmin__NullableBooleanInput;
 module NumberInput = BsReactAdmin__NumberInput;
 module RadioButtonGroupInput = BsReactAdmin__RadioButtonGroupInput;
 module ReferenceInput = BsReactAdmin__ReferenceInput;
