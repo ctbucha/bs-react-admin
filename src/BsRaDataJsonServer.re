@@ -1,8 +1,8 @@
 /*
-type httpClient('a) =
-  (~url: string, ~params: Js.Json.t, ~urlCb: string, ~paramsCb: Js.Json.t) =>
-  Js.Promise.t('a);
-*/
+ type httpClient('a) =
+   (~url: string, ~params: Js.Json.t, ~urlCb: string, ~paramsCb: Js.Json.t) =>
+   Js.Promise.t('a);
+ */
 
 type dataProvider('a) =
   (~type_: string, ~resource: string, ~params: Js.Json.t) => Js.Promise.t('a);
@@ -13,14 +13,7 @@ type dataProvider('a) =
 external getRaDataJsonServer :
   (
     ~apiUrl: string,
-    ~httpClient: (
-                   ~url: string,
-                   ~params: Js.Json.t,
-                   ~urlCb: string,
-                   ~paramsCb: Js.Json.t
-                 ) =>
-                 Js.Promise.t('a)
-                   =?,
+    ~httpClient: (~url: string, ~params: Js.Json.t) => Js.Promise.t('a)=?,
     unit
   ) =>
   dataProvider('a) =
