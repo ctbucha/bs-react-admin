@@ -1,8 +1,8 @@
 type util = {
   .
+  [@bs.meth]
   "fetchJson":
-    (~url: string, ~options: Js.Dict.t(string)=?, unit) =>
-    Js.Promise.t(Js.Dict.t(string)),
+    (string, Js.Dict.t(string)) => Js.Promise.t(Js.Dict.t(string)),
 };
 
 [@bs.module "react-admin"] external fetchUtils : util = "";
