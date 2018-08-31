@@ -11,9 +11,6 @@ module Edit = BsReactAdmin__Edit;
 module EditButton = BsReactAdmin__EditButton;
 module SimpleForm = BsReactAdmin__SimpleForm;
 
-module DisabledInput = BsReactAdmin__DisabledInput;
-module TextInput = BsReactAdmin__TextInput;
-
 module Datagrid = BsReactAdmin__Datagrid;
 
 /* fields */
@@ -34,3 +31,22 @@ module ReferenceArrayField = BsReactAdmin__ReferenceArrayField;
 module RichTextField = BsReactAdmin__RichTextField;
 module TextField = BsReactAdmin__TextField;
 module UrlField = BsReactAdmin__UrlField;
+
+/* inputs */
+
+module ArrayInput = BsReactAdmin__ArrayInput;
+module AutocompleteInput = BsReactAdmin__AutocompleteInput;
+module BooleanInput = BsReactAdmin__BooleanInput;
+module CheckboxGroupInput = BsReactAdmin__CheckboxGroupInput;
+module DateInput = BsReactAdmin__DateInput;
+module DisabledInput = BsReactAdmin__DisabledInput;
+module FileInput = BsReactAdmin__FileInput;
+module ImageInput = BsReactAdmin__ImageInput;
+module LongTextInput = BsReactAdmin__LongTextInput;
+module NumberInput = BsReactAdmin__NumberInput;
+module RadioButtonGroupInput = BsReactAdmin__RadioButtonGroupInput;
+module ReferenceInput = BsReactAdmin__ReferenceInput;
+module ReferenceArrayInput = BsReactAdmin__ReferenceArrayInput;
+module SelectInput = BsReactAdmin__SelectInput;
+module SelectArrayInput = BsReactAdmin__SelectArrayInput;
+module TextInput = BsReactAdmin__TextInput;
