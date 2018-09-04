@@ -1,9 +1,3 @@
-/*
- type httpClient('a) =
-   (~url: string, ~params: Js.Json.t, ~urlCb: string, ~paramsCb: Js.Json.t) =>
-   Js.Promise.t('a);
- */
-
 type dataProvider('a) =
   (~type_: string, ~resource: string, ~params: Js.Dict.t(string)) =>
   Js.Promise.t('a);
