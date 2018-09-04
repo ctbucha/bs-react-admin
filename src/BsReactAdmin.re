@@ -2,7 +2,7 @@ module Admin = BsReactAdmin__Admin;
 module Resource = BsReactAdmin__Resource;
 
 /* util */
-module FetchUtils = BsReactAdmin__FetchUtils;
+let fetchUtils = BsReactAdmin__FetchUtils.fetchUtils;
 
 /* button */
 module ShowButton = BsReactAdmin__ShowButton;
