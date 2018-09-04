@@ -29,9 +29,17 @@ Then add `@ctbucha/bs-react-admin` to `bs-dependencies` in your `bsconfig.json`:
 /* App.re */
 let component = ReasonReact.statelessComponent("App");
 
+let myHttpClient = (~url, ~params) => {
+  Js.log(url);
+  Js.log(params);
+
+  BsReactAdmin.fetchUtils##fetchJson(url, params);
+};
+
 let dataProvider = 
   BsRaDataJsonServer.getRaDataJsonServer(
     ~apiUrl="http://jsonplaceholder.typicode.com",
+    ~httpClient=myHttpClient,
     (),
   );
 
@@ -40,7 +48,7 @@ let make = _children => {
   render: _self => 
     BsReactAdmin.(
       <div>
-        <Admin dataProvider=dataProvider>
+        <Admin dataProvider>
           <Resource name="posts" list=PostList.toReactJs />
         </Admin>
       </div>

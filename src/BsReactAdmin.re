@@ -1,20 +1,31 @@
 module Admin = BsReactAdmin__Admin;
-
 module Resource = BsReactAdmin__Resource;
 
-module List = BsReactAdmin__List;
-module Show = BsReactAdmin__Show;
+/* util */
+let fetchUtils = BsReactAdmin__FetchUtils.fetchUtils;
+
+/* button */
 module ShowButton = BsReactAdmin__ShowButton;
-module SimpleShowLayout = BsReactAdmin__SimpleShowLayout;
+module EditButton = BsReactAdmin__EditButton;
+
+/* list */
+module List = BsReactAdmin__List;
+module Datagrid = BsReactAdmin__Datagrid;
+module SimpleList = BsReactAdmin__SimpleList;
+module SingleFieldList = BsReactAdmin__SingleFieldList;
+
+/* detail */
 module Create = BsReactAdmin__Create;
 module Edit = BsReactAdmin__Edit;
-module EditButton = BsReactAdmin__EditButton;
+module Show = BsReactAdmin__Show;
+module SimpleShowLayout = BsReactAdmin__SimpleShowLayout;
+module TabbedShowLayout = BsReactAdmin__TabbedShowLayout;
+
+/* form */
 module SimpleForm = BsReactAdmin__SimpleForm;
+module TabbedForm = BsReactAdmin__TabbedForm;
 
-module Datagrid = BsReactAdmin__Datagrid;
-
-/* fields */
-
+/* field */
 module ArrayField = BsReactAdmin__ArrayField;
 module BooleanField = BsReactAdmin__BooleanField;
 module ChipField = BsReactAdmin__ChipField;
@@ -32,8 +43,7 @@ module RichTextField = BsReactAdmin__RichTextField;
 module TextField = BsReactAdmin__TextField;
 module UrlField = BsReactAdmin__UrlField;
 
-/* inputs */
-
+/* input */
 module ArrayInput = BsReactAdmin__ArrayInput;
 module AutocompleteInput = BsReactAdmin__AutocompleteInput;
 module BooleanInput = BsReactAdmin__BooleanInput;
@@ -43,6 +53,7 @@ module DisabledInput = BsReactAdmin__DisabledInput;
 module FileInput = BsReactAdmin__FileInput;
 module ImageInput = BsReactAdmin__ImageInput;
 module LongTextInput = BsReactAdmin__LongTextInput;
+module NullableBooleanInput = BsReactAdmin__NullableBooleanInput;
 module NumberInput = BsReactAdmin__NumberInput;
 module RadioButtonGroupInput = BsReactAdmin__RadioButtonGroupInput;
 module ReferenceInput = BsReactAdmin__ReferenceInput;
