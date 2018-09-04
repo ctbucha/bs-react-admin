@@ -7,6 +7,10 @@
 
 Feel free to create an issue or PR if you find anything missing.
 
+Also, many of the types are overly permissive in an attempt to just get
+react-admin to work with ReasonML projects. Hopefully, these types will be much
+stricter in future releases.
+
 ## Installation
 
 
