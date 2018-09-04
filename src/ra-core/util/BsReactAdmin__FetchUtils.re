@@ -9,4 +9,7 @@ type util = {
 
 [@bs.module "react-admin"] external fetchUtils : util = "";
 
+let fetchUtils = fetchUtils;
+/*
 let fetchJson = fetchUtils##fetchJson;
+*/
