@@ -15,7 +15,7 @@ stricter in future releases.
 
 
 ```
-npm install --save ctbucha/bs-react-admin
+npm install --save @ctbucha/bs-react-admin
 ```
 
 Then add `@ctbucha/bs-react-admin` to `bs-dependencies` in your `bsconfig.json`:
