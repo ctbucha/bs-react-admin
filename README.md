@@ -29,7 +29,7 @@ Then add `@ctbucha/bs-react-admin` to `bs-dependencies` in your `bsconfig.json`:
 /* App.re */
 let component = ReasonReact.statelessComponent("App");
 
-let myHttpClient = (~url: string, ~params: Js.Dict.t(string)) => {
+let myHttpClient = (~url, ~params) => {
   Js.log(url);
   Js.log(params);
 
