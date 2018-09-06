@@ -4,6 +4,9 @@ module Resource = BsReactAdmin__Resource;
 /* util */
 let fetchUtils = BsReactAdmin__FetchUtils.fetchUtils;
 
+/* data-provider */
+type dataProvider = BsReactAdmin__Admin.dataProvider;
+
 /* button */
 module ShowButton = BsReactAdmin__ShowButton;
 module EditButton = BsReactAdmin__EditButton;

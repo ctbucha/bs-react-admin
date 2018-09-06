@@ -1,8 +1,7 @@
 [@bs.module "react-admin"] external admin : ReasonReact.reactClass = "Admin";
 
-type dataProvider('a) =
-  (~type_: string, ~resource: string, ~params: Js.Dict.t(string)) =>
-  Js.Promise.t('a);
+type dataProvider =
+  (~type_: string, ~resource: string, ~params: Js.Dict.t(string)) => Js.Json.t;
 
 [@bs.obj]
 external makeProps :
@@ -14,7 +13,7 @@ external makeProps :
     ~customReducers: 'e=?,
     ~customRoutes: 'f=?,
     ~dashboard: 'g=?,
-    ~dataProvider: dataProvider('response),
+    ~dataProvider: dataProvider,
     ~history: 'h=?,
     ~i18nProvider: 'i=?,
     ~initialState: 'j=?,
