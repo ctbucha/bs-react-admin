@@ -1,7 +1,6 @@
 [@bs.module "react-admin"] external admin : ReasonReact.reactClass = "Admin";
 
-type dataProvider =
-  (~type_: string, ~resource: string, ~params: Js.Dict.t(string)) => Js.Json.t;
+type dataProvider;
 
 [@bs.obj]
 external makeProps :
