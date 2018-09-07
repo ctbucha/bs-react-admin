@@ -32,7 +32,7 @@ type params = {
 external getRaDataJsonServer :
   (
     ~apiUrl: string,
-    ~httpClient: BsReactAdmin__FetchUtils.httpClient=?,
+    ~httpClient: (string, _) => Js.Promise.t(Fetch.Response.t)=?,
     unit
   ) =>
   BsReactAdmin__Admin.dataProvider =

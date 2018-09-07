@@ -1,6 +1,6 @@
 [@bs.module "react-admin"] external admin : ReasonReact.reactClass = "Admin";
 
-type dataProvider = BsReactAdmin__FetchUtils.httpClient;
+type dataProvider;
 
 [@bs.obj]
 external makeProps :
@@ -13,16 +13,16 @@ external makeProps :
     ~customRoutes: 'f=?,
     ~dashboard: 'g=?,
     ~dataProvider: dataProvider,
-    ~history: 'h=?,
-    ~i18nProvider: 'i=?,
-    ~initialState: 'j=?,
-    ~loading: 'k=?,
+    ~history: 'i=?,
+    ~i18nProvider: 'j=?,
+    ~initialState: 'k=?,
+    ~loading: 'l=?,
     ~locale: string=?,
-    ~loginPage: 'l=?,
-    ~logoutButton: 'm=?,
-    ~menu: 'n=?,
-    ~theme: 'o=?,
-    ~title: 'p=?,
+    ~loginPage: 'm=?,
+    ~logoutButton: 'n=?,
+    ~menu: 'o=?,
+    ~theme: 'p=?,
+    ~title: 'q=?,
     unit
   ) =>
   _ =
