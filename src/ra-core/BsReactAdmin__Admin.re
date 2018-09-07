@@ -1,6 +1,6 @@
 [@bs.module "react-admin"] external admin : ReasonReact.reactClass = "Admin";
 
-type dataProvider;
+type dataProvider = BsReactAdmin__FetchUtils.httpClient;
 
 [@bs.obj]
 external makeProps :
