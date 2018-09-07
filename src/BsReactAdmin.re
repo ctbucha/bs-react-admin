@@ -2,9 +2,6 @@ module Admin = BsReactAdmin__Admin;
 module Resource = BsReactAdmin__Resource;
 
 /* util */
-/*
-let fetchUtils = BsReactAdmin__FetchUtils.fetchUtils;
-*/
 module FetchUtils = BsReactAdmin__FetchUtils;
 
 /* data-provider */
