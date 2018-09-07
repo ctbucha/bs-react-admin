@@ -33,11 +33,16 @@ Then add `@ctbucha/bs-react-admin` to `bs-dependencies` in your `bsconfig.json`:
 /* App.re */
 let component = ReasonReact.statelessComponent("App");
 
-let myHttpClient = (~url, ~params) => {
-  Js.log(url);
-  Js.log(params);
+let myHttpClient = (url, _params) => {
+  let headersDict = Js.Dict.empty();
+  Js.Dict.set(headersDict, "Accept", "application/json");
 
-  BsReactAdmin.fetchUtils##fetchJson(url, params);
+  let headers = 
+    headersDict |> Fetch.HeadersInit.makeWithDict |> Fetch.Headers.makeWithInit;
+
+  let myParams = BsReactAdmin.FetchUtils.options(~headers, ());
+
+  BsReactAdmin.FetchUtils.fetchJson(url, myParams);
 };
 
 let dataProvider = 

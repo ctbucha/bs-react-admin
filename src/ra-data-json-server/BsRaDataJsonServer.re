@@ -1,6 +1,30 @@
-type dataProvider('a) =
-  (~type_: string, ~resource: string, ~params: Js.Dict.t(string)) =>
-  Js.Promise.t('a);
+[@bs.deriving abstract]
+type pagination = {
+  page: int,
+  perPage: int,
+};
+
+[@bs.deriving abstract]
+type sort = {
+  field: string,
+  order: [ | `asc | `desc],
+};
+
+[@bs.deriving abstract]
+type params = {
+  [@bs.optional]
+  pagination,
+  [@bs.optional]
+  sort,
+  [@bs.optional]
+  filter: string,
+  [@bs.optional]
+  id: string,
+  [@bs.optional]
+  ids: list(string),
+  [@bs.optional]
+  target: string,
+};
 
 %raw
 "var RaDataJsonServer = require('ra-data-json-server')";
@@ -8,11 +32,9 @@ type dataProvider('a) =
 external getRaDataJsonServer :
   (
     ~apiUrl: string,
-    ~httpClient: (~url: string, ~params: Js.Dict.t(string)) =>
-                 Js.Promise.t('a)
-                   =?,
+    ~httpClient: (string, _) => Js.Promise.t(Fetch.Response.t)=?,
     unit
   ) =>
-  dataProvider('a) =
+  BsReactAdmin__Admin.dataProvider =
   "RaDataJsonServer";
 let getRaDataJsonServer = getRaDataJsonServer;

@@ -1,12 +1,25 @@
-type util = {
-  .
-  [@bs.meth]
-  "fetchJson":
-    [@bs.uncurry] (
-      (string, Js.Dict.t(string)) => Js.Promise.t(Js.Dict.t(string))
-    ),
+[@bs.deriving abstract]
+type user = {
+  authentication: string,
+  token: string,
 };
 
-[@bs.module "react-admin"] external fetchUtils : util = "";
+[@bs.deriving abstract]
+type options = {
+  [@bs.optional]
+  headers: Fetch.Headers.t,
+  [@bs.optional]
+  body: Fetch.Body.t,
+  [@bs.optional]
+  user,
+  [@bs.optional] [@bs.as "method"]
+  method_: string,
+};
 
-let fetchUtils = fetchUtils;
+type util;
+
+[@bs.module "react-admin"] external fetchUtils : util = "";
+[@bs.send]
+external fetchJson : (util, string, options) => Js.Promise.t(Fetch.Response.t) = "";
+
+let fetchJson = (url, options) => fetchJson(fetchUtils, url, options);

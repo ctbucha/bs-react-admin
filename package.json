@@ -33,6 +33,7 @@
     "bs-platform": "^4.0.5"
   },
   "dependencies": {
+    "bs-fetch": "^0.3.0",
     "ra-data-json-server": "^2.2.2",
     "react": "^16.4.2",
     "react-admin": "^2.2.2",
