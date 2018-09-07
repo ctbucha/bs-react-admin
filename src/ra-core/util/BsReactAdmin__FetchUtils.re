@@ -16,19 +16,10 @@ type options = {
   method_: string,
 };
 
-type util;
-
 type httpClient = ((. string, options) => Js.Promise.t(Js.Json.t));
 
-/*
- type util = {. "fetchJson": httpClient};
- */
+type util = {. "fetchJson": httpClient};
 
 [@bs.module "react-admin"] external fetchUtils : util = "";
-[@bs.send] external fetchJson : util => httpClient = "";
 
-/*
- let fetchUtils = fetchUtils;
- */
-
-let fetchJson = fetchJson(fetchUtils);
+let fetchUtils = fetchUtils;
