@@ -7,19 +7,20 @@ type user = {
 [@bs.deriving abstract]
 type options = {
   [@bs.optional]
-  headers: Fetch.Headers.t,
+  mutable headers: Fetch.Headers.t,
   [@bs.optional]
-  body: Fetch.Body.t,
+  mutable body: Fetch.Body.t,
   [@bs.optional]
-  user,
+  mutable user,
   [@bs.optional] [@bs.as "method"]
-  method_: string,
+  mutable method_: string,
 };
 
 type util;
 
 [@bs.module "react-admin"] external fetchUtils : util = "";
 [@bs.send]
-external fetchJson : (util, string, options) => Js.Promise.t(Fetch.Response.t) = "";
+external fetchJson : (util, string, options) => Js.Promise.t(Fetch.Response.t) =
+  "";
 
 let fetchJson = (url, options) => fetchJson(fetchUtils, url, options);
