@@ -40,9 +40,9 @@ let myHttpClient = (url, _params) => {
   let headers = 
     headersDict |> Fetch.HeadersInit.makeWithDict |> Fetch.Headers.makeWithInit;
 
-  let myParams = BsReactAdmin.FetchUtils.options(~headers, ());
+  BsReactAdmin.FetchUtils.headersSet(params, headers);
 
-  BsReactAdmin.FetchUtils.fetchJson(url, myParams);
+  BsReactAdmin.FetchUtils.fetchJson(url, params);
 };
 
 let dataProvider = 
