@@ -18,7 +18,7 @@ type options = {
 
 type util;
 
-type httpClient = [@bs.meth] ((string, options) => Js.Promise.t(Js.Json.t));
+type httpClient = ((. string, options) => Js.Promise.t(Js.Json.t));
 
 /*
  type util = {. "fetchJson": httpClient};
