@@ -25,7 +25,7 @@ type httpClient = (string, options) => Js.Promise.t(Js.Json.t);
  */
 
 [@bs.module "react-admin"] external fetchUtils : util = "";
-[@bs.send] external fetchJson : util => httpClient = "";
+[@bs.send] external fetchJson : (util, string, options) => Js.Promise.t(Js.Json.t) = "";
 
 /*
  let fetchUtils = fetchUtils;
