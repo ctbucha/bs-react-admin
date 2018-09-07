@@ -7,9 +7,9 @@ type user = {
 [@bs.deriving abstract]
 type options = {
   [@bs.optional]
-  headers: Js.Dict.t(string),
+  headers: Fetch.Headers.t,
   [@bs.optional]
-  body: string,
+  body: Fetch.Body.t,
   [@bs.optional]
   user,
   [@bs.optional] [@bs.as "method"]
@@ -20,15 +20,8 @@ type util;
 
 type httpClient = (string, options) => Js.Promise.t(Js.Json.t);
 
-/*
- type util = {. "fetchJson": httpClient};
- */
-
 [@bs.module "react-admin"] external fetchUtils : util = "";
-[@bs.send] external fetchJson : (util, string, options) => Js.Promise.t(Js.Json.t) = "";
-
-/*
- let fetchUtils = fetchUtils;
- */
+[@bs.send]
+external fetchJson : (util, string, options) => Js.Promise.t(Js.Json.t) = "";
 
 let fetchJson = (url, options) => fetchJson(fetchUtils, url, options);
