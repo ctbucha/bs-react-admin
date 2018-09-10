@@ -2,7 +2,7 @@
 
 type dataProvider;
 type authProvider =
-  (BsReactAdmin__Auth.actionType, Js.Dict.t(string)) =>
+  (string, Js.Dict.t(string)) =>
   Js.Promise.t(Js.Nullable.t(string));
 
 [@bs.obj]
