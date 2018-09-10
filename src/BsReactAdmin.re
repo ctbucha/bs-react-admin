@@ -7,6 +7,9 @@ module FetchUtils = BsReactAdmin__FetchUtils;
 /* data-provider */
 type dataProvider = BsReactAdmin__Admin.dataProvider;
 
+/* auth-provider */
+type authProvider = BsReactAdmin__Admin.authProvider;
+
 /* button */
 module ShowButton = BsReactAdmin__ShowButton;
 module EditButton = BsReactAdmin__EditButton;

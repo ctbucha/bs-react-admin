@@ -1,12 +1,15 @@
 [@bs.module "react-admin"] external admin : ReasonReact.reactClass = "Admin";
 
 type dataProvider;
+type authProvider =
+  (BsReactAdmin__Auth.actionType, Js.Dict.t(string)) =>
+  Js.Promise.t(Js.Nullable.t(string));
 
 [@bs.obj]
 external makeProps :
   (
     ~appLayout: 'a=?,
-    ~authProvider: 'b=?,
+    ~authProvider: authProvider=?,
     ~catchAll: 'c=?,
     ~customSagas: 'd=?,
     ~customReducers: 'e=?,
