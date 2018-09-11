@@ -2,8 +2,7 @@
 
 type dataProvider;
 type authProvider =
-  (string, Js.Dict.t(string)) =>
-  Js.Promise.t(Js.Nullable.t(string));
+  (string, Js.Json.t) => Js.Promise.t(Js.Nullable.t(string));
 
 [@bs.obj]
 external makeProps :
