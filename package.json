@@ -1,6 +1,6 @@
 {
   "name": "@ctbucha/bs-react-admin",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "BuckleScript bindings for react-admin",
   "main": "index.js",
   "scripts": {
