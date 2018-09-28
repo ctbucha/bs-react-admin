@@ -29,6 +29,7 @@ module TabbedShowLayout = BsReactAdmin__TabbedShowLayout;
 
 /* form */
 module SimpleForm = BsReactAdmin__SimpleForm;
+module SimpleFormIterator = BsReactAdmin__SimpleFormIterator;
 module TabbedForm = BsReactAdmin__TabbedForm;
 
 /* field */
