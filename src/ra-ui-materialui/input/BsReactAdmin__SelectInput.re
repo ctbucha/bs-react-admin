@@ -6,7 +6,7 @@ type props('a, 'b, 'c, 'd, 'e, 'f, 'g) = {
   [@bs.optional]
   allowEmpty: bool,
   [@bs.optional]
-  choices: list('a),
+  choices: array('a),
   [@bs.optional]
   classes: 'b,
   [@bs.optional]
