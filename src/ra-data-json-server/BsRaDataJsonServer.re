@@ -26,15 +26,12 @@ type params = {
   target: string,
 };
 
-%raw
-"var RaDataJsonServer = require('ra-data-json-server')";
-[@bs.val]
-external getRaDataJsonServer :
-  (
+[@bs.module "ra-data-json-server"] 
+external raDataJsonServer :
+  ( 
     ~apiUrl: string,
     ~httpClient: (string, _) => Js.Promise.t(Fetch.Response.t)=?,
     unit
   ) =>
   BsReactAdmin__Admin.dataProvider =
-  "RaDataJsonServer";
-let getRaDataJsonServer = getRaDataJsonServer;
+  "default";
